@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :media
+
   devise_for :users
   resources :posts
 

@@ -1,24 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="post">
 
-<p>
-  <strong>Date:</strong>
-  <%= @post.date %>
-</p>
+  <div class="post-title"><%= @post.title %></div>
+  <div><%= @post.date_short %>  by <%= @post.username %></div>
+  
+  <div class="post-body"><%= @markdown.render(@post.processed_body).html_safe %>
+  
+  <% if user_signed_in? %><%= link_to 'Edit', edit_post_path(@post) %><% end %>
+  <%= link_to 'Back', posts_path %>
 
-<p>
-  <strong>Username:</strong>
-  <%= @post.username %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>

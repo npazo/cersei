@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>M:</strong>
+  <%= @medium.m %>
+  <%= image_tag(@medium.m) %>
+
+</p>
+
+<%= link_to 'Edit', edit_medium_path(@medium) %> |
+<%= link_to 'Back', media_path %>

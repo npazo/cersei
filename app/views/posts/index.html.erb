@@ -3,15 +3,9 @@
 <% @posts.each do |post| %>
     <div class="post">
         <div class="post-title"><%= link_to post.title, post %></div>
-        <div class="post-date"><%= post.date.strftime("%b %-e %Y") %></div> <div class="post-user">by <%= post.username %></div>
-        <div class="post-body"><%= post.body %></div>
-        <% if user_signed_in? %>
-            <div><%= link_to 'Edit', edit_post_path(post) %></div>
-            <div><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        <% end %>
+        <div class="post-date"><%= post.date_short %></div> <div class="post-user">by <%= post.username %></div>
+        <div class="post-body"><%= @markdown.render(post.processed_body(true)).html_safe %></div>
+        <div class="post-more"><%= link_to "Read More...", post %></div>        
     </div>
 <% end %>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
