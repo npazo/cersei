@@ -14,20 +14,37 @@
  *= require_self
  */
 
+@import "bootstrap-sprockets";
+@import "bootswatch/flatly/variables";
+
+@import "bootstrap";
+@import "bootswatch/flatly/bootswatch";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+#content {
+    margin: auto;
+    width: 800px;
+}
+
+.thumbnail {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+/*
+
+
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-/*
-  font-size: 13px;
-  line-height: 18px;
-*/
+  font-family: "open_sansregular";
+  font-size: 100%;
+
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
 }
 
 pre {
@@ -86,8 +103,13 @@ div {
   }
 }
 
-
-#content {
+#main {
     margin: auto;
     width: 900px;
 }
+
+#content {
+    margin: auto;
+    width: 600px;
+}
+*/

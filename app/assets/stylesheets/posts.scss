@@ -3,13 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .post {
-//     border: 1px solid black;
     
     .post-title {
-//         background-color: #b9b9b9;
-//         border-bottom: 1px solid black;
         font-size: 2em;
-        padding: 5px;
+//         padding: 5px;
         
         a {
             color: #000;
@@ -29,6 +26,26 @@
     }
     
     .post-body {
-        padding: 5px;
+        font-size: 1.1em;
+        margin-top: 10px;
+//         padding: 5px;
+        
+        
+        img {
+          max-width: 600px;
+          max-height: 500px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto
+        }
+    }
+   
+}
+
+.field {
+    textarea {
+        font-size: 14px;
+        height: 600px;
+        width: 100%;
     }
 }
