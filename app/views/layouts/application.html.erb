@@ -39,10 +39,16 @@
   </div><!-- /.navbar -->
 
 
-    <div id="content">
-        <p id="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        
+    <div class="container">
+      <% flash.each do |name, msg| %>
+        <% if (name == "alert")
+              flash_class = "alert alert-danger"
+           else
+              flash_class = "alert alert-info"
+           end   %>
+		        <%= content_tag(:div, msg, { :id => "flash_#{name}", :class => flash_class }) %>
+		  <% end %>
+		        
         <%= yield %>
     </div>
 
