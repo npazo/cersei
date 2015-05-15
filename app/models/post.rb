@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   has_many :posts_medium
   has_many :media, :through => :posts_medium
+  belongs_to :user
   validates :title, presence: true
 
   def processed_body(truncated = false)
