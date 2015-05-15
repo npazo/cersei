@@ -3,8 +3,14 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :posts
+  resources :settings do
+    collection do
+      get 'mark_all_reviewed'
+    end
+  end
 
   root 'posts#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

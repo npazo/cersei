@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513015316) do
+ActiveRecord::Schema.define(version: 20150515201059) do
 
   create_table "media", force: :cascade do |t|
     t.string   "m_file_name"
@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(version: 20150513015316) do
     t.datetime "date"
     t.string   "username"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "slug",       default: "", null: false
+    t.integer  "user_id"
   end
 
   create_table "posts_media", force: :cascade do |t|
@@ -44,9 +46,12 @@ ActiveRecord::Schema.define(version: 20150513015316) do
   create_table "settings", force: :cascade do |t|
     t.string   "name"
     t.string   "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.boolean  "is_new",     default: true
   end
+
+  add_index "settings", ["name"], name: "index_settings_on_name", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

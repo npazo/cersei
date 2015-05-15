@@ -29,5 +29,13 @@
 }
 
 body {
-    padding-top: 70px;
+  margin-top: 70px;
+}
+
+#headline {
+  text-align: center;
+}
+
+table.auto_size {
+width: auto !important;
 }
