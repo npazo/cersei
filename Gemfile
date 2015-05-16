@@ -12,7 +12,9 @@ gem 'unicorn'
 gem 'redcarpet' # markdown
 gem 'best_in_place', '~> 3.0.3' # in place editing
 
-
+group :production do
+   gem "mysql2", "~> 0.3.11"
+end
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
