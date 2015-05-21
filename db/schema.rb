@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515201059) do
+ActiveRecord::Schema.define(version: 20150521002824) do
 
   create_table "media", force: :cascade do |t|
     t.string   "m_file_name"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20150515201059) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "approved",               default: false, null: false
+    t.string   "display_name"
   end
 
   add_index "users", ["approved"], name: "index_users_on_approved"

@@ -3,7 +3,7 @@
 <div class="post">
 
   <div class="post-title"><%= @post.title %></div>
-  <div><%= @post.date_short %>  by <%= @post.username %></div>
+  <div><%= @post.date_short %>  by <%= @post.user.display_name %></div>
   
   <div class="post-body"><%= @markdown.render(@post.processed_body).html_safe %>
   
