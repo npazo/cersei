@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   after_filter  :check_settings
 
   def create_markdown_parser
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new, extensions = {})
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new, fenced_code_blocks: true)
   end
   
   def check_settings
