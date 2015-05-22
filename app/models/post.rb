@@ -21,9 +21,16 @@ class Post < ActiveRecord::Base
     return @return.html_safe
   end
 
-
   def date_short
     return date.strftime("%b %-e %Y")
+  end
+
+  def has_more?
+    if self.body.include?('%%more%%')
+      true
+    else
+      false
+    end
   end
 
 end
