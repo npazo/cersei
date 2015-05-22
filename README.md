@@ -9,3 +9,4 @@ Gems
 - paperclip for file upload
 - bootstrap SASS and font-awesome sass
 - redcarpet for markdown conversion
+- [Rouge](https://github.com/jneen/rouge) for syntax highlighting

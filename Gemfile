@@ -11,6 +11,7 @@ gem 'font-awesome-sass'
 gem 'unicorn'
 gem 'redcarpet' # markdown
 gem 'best_in_place', '~> 3.0.3' # in place editing
+gem 'rouge'
 
 group :production do
    gem "mysql2", "~> 0.3.11"
