@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
   validates :slug, presence: true,
     uniqueness: true,
-    format: /\A[-_a-z0-9]+\Z/,
+    format: /\A[-_a-z0-9]+\Z/
 
   def processed_body(truncated = false)
     
