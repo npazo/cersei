@@ -4,7 +4,7 @@
 
 <% @posts.each do |post| %>
     <div class="post">
-        <div class="post-title"><%= link_to post.title, post %></div>
+        <div class="post-title"><%= link_to post.title, post.slug %></div>
         <div class="post-meta">
           <div class="post-date"><%= post.date_short %></div> <div class="post-user"> | <%= post.user.display_name %></div>
         </div>

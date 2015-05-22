@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   resources :media
 
   devise_for :users
-  resources :posts
+  
+  resources :posts, except: [:show]
+  get ':slug' => 'posts#show', as: 'slug'
+  
   resources :settings do
     collection do
       get 'mark_all_reviewed'

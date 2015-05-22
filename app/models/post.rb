@@ -2,7 +2,12 @@ class Post < ActiveRecord::Base
   has_many :posts_medium
   has_many :media, :through => :posts_medium
   belongs_to :user
+
   validates :title, presence: true
+
+  validates :slug, presence: true,
+    uniqueness: true,
+    format: /\A[-_a-z0-9]+\Z/,
 
   def processed_body(truncated = false)
     
