@@ -10,18 +10,25 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ * require_tree .
  *= require_self
  */
 
 @import "bootstrap-sprockets";
-@import "bootswatch/flatly/variables";
+// @import "bootswatch/flatly/variables";
+// @import "bootswatch/simplex/variables";
+@import "bootswatch/yeti/variables";
 
 @import "bootstrap";
-@import "bootswatch/flatly/bootswatch";
+// @import "bootswatch/flatly/bootswatch";
+/* @import "bootswatch/simplex/variables"; */
+@import "bootswatch/yeti/variables";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+@import "posts.scss";
+@import "settings.scss";
 
 .thumbnail {
   max-height: 100px;
@@ -29,6 +36,7 @@
 }
 
 body {
+//   background-color: #eee;
   margin-top: 70px;
 }
 
