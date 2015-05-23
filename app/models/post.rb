@@ -27,7 +27,7 @@ class Post < ActiveRecord::Base
   end
 
   def date_short
-    return date.strftime("%b %-e %Y")
+    return date.strftime("%b %-e, %Y")
   end
 
   def has_more?
