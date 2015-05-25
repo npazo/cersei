@@ -3,15 +3,16 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :posts, except: [:show]
-  get ':slug' => 'posts#show', as: 'slug'
-  
-  resources :settings do
+    resources :settings do
     collection do
       get 'mark_all_reviewed'
     end
   end
-
+  
+  resources :posts, except: [:show] do
+    get ':slug' => 'posts#show', as: 'slug'
+  end
+  
   root 'posts#index'
 
 
