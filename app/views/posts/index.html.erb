@@ -6,7 +6,7 @@
     <div class="post">
         <div class="post-title"><%= link_to post.title, post.slug %></div>
         <div class="post-meta text-muted">
-          <div class="post-date"><%= icon("terminal") %> <%= post.date_short %></div> <div class="post-user"> / <%= post.user.display_name %></div>
+          <div class="post-date"><%= icon("#{Setting.get('meta_glyph')}") %> <%= post.date_short %></div> <div class="post-user"> / <%= post.user.display_name %></div>
         </div>
         <div class="post-body"><%= @markdown.render(post.processed_body(true)).html_safe %></div>
         <% if post.has_more? %>

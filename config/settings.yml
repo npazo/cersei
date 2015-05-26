@@ -2,3 +2,7 @@ site_title:
   default: Cersei
 site_headline:
   default: Welcome!
+main_glyph:
+  default: code
+meta_glyph:
+  default: terminal
