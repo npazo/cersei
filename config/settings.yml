@@ -3,6 +3,6 @@ site_title:
 site_headline:
   default: Welcome!
 main_glyph:
-  default: code
+  default: dot-circle-o
 meta_glyph:
-  default: terminal
+  default: bookmark
