@@ -13,6 +13,9 @@ gem 'redcarpet' # markdown
 gem 'best_in_place', '~> 3.0.3' # in place editing
 gem 'rouge' # syntax highlighting in code blocks
 
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.7.14'
+
 group :production do
    gem "mysql2", "~> 0.3.11"
 end

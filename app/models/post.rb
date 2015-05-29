@@ -9,6 +9,10 @@ class Post < ActiveRecord::Base
     uniqueness: true,
     format: /\A[-_a-z0-9]+\Z/
 
+  def to_param
+    slug
+  end
+
   def processed_body(truncated = false)
     
     if truncated

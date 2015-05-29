@@ -9,9 +9,8 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :posts, except: [:show] do
-    get ':slug' => 'posts#show', as: 'slug'
-  end
+  resources :posts, param: :slug
+  get '/:slug', to: 'posts#show'
   
   root 'posts#index'
 
