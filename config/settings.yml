@@ -6,3 +6,5 @@ main_glyph:
   default: dot-circle-o
 meta_glyph:
   default: bookmark
+enable_registration:
+  default: true

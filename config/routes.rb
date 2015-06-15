@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :media
 
-  devise_for :users
-  
+   devise_for :users, controllers: { registrations: "users/registrations" }
+ 
     resources :settings do
     collection do
       get 'mark_all_reviewed'
