@@ -49,3 +49,10 @@ body {
 table.auto_size {
 width: auto !important;
 }
+
+#footer {
+  background-color: $gray-lighter;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
