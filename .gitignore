@@ -47,4 +47,4 @@ build/
 .DS_Store
 /public/uploads
 /config/mail.yml
-/config/database.yml
+#/config/database.yml
