@@ -8,3 +8,4 @@ meta_glyph:
   default: bookmark
 enable_registration:
   default: true
+
