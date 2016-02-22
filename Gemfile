@@ -18,6 +18,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.7.14'
 
 group :production do
    gem "mysql2", "~> 0.3.11"
+   gem 'rails_12factor'
 end
 
 # Use Uglifier as compressor for JavaScript assets
