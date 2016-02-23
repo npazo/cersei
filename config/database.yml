@@ -21,7 +21,6 @@ test:
   database: db/test.sqlite3
 
 production:
+  <<: *default
   adapter: mysql2
-  database: cersei
-  username: cersei
-  password: cersei
+  url: <%= ENV['DATABASE_URL'] %>
