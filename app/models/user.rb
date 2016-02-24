@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :posts
 
   def active_for_authentication? 
-    super && approved? 
+    super && (approved? || User.count == 1) ## this allows the first user that signs up not to have to be approved
   end 
 
   def inactive_message 
