@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
-gem 'rails'#, '4.2.1'
+gem 'rails', '4.2.1'
 gem 'sass-rails', '~> 5.0'
 
 gem 'devise'
@@ -8,7 +9,6 @@ gem "paperclip", "~> 4.2"
 gem "bootstrap-sass"
 gem 'bootswatch-rails'
 gem 'font-awesome-sass'
-gem 'unicorn'
 gem 'redcarpet' # markdown
 gem 'best_in_place', '~> 3.0.3' # in place editing
 gem 'rouge' # syntax highlighting in code blocks
@@ -20,6 +20,7 @@ group :production do
    gem "puma"
    gem "mysql2", "~> 0.3.11"
    gem 'rails_12factor'
+   gem 'unicorn'
 end
 
 # Use Uglifier as compressor for JavaScript assets
